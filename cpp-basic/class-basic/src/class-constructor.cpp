@@ -54,9 +54,9 @@ void passByValue(Vec v) {
   // impl ...
 }
 
-// Return by value will call copy constructor implicitly without RVO (Return
-// Value Optimization). RVO is forced by C++17, so we can try C++14 with
-// flag -fno-elide-constructors to see the error.
+// Return by value will call copy constructor implicitly if RVO (Return
+// Value Optimization) disabled. RVO is forced by C++17, so we can try C++14
+// with flag -fno-elide-constructors to see the error.
 
 // Vec returnByValue(int n) { return Vec(n); }
 
